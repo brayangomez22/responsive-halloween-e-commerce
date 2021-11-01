@@ -1,0 +1,131 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	background: rgba(0, 0, 0, 0.3);
+	padding: 3rem 9%;
+
+	&.active {
+		padding: 2rem 9%;
+		background: #222;
+	}
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&__logo {
+		font-size: 2.5rem;
+		color: #fff;
+		font-weight: bolder;
+
+		i {
+			padding-right: 0.5rem;
+			color: var(--main-color);
+			animation: floating 3s linear infinite;
+		}
+	}
+
+	&__menu {
+		@media screen and (max-width: 767px) {
+			position: fixed;
+			width: 100%;
+			top: -150%;
+			left: 0;
+			padding: 3.5rem 0;
+			transition: 0.4s;
+			z-index: 100;
+			border-radius: 0 0 1.5rem 1.5rem;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 1.5rem;
+	}
+
+	&__link {
+		font-size: 1.7rem;
+		color: #fff;
+		margin: 0 1rem;
+
+		&.active,
+		&:hover {
+			color: var(--main-color);
+		}
+	}
+
+	&__icons {
+		& a,
+		& div {
+			font-size: 2.5rem;
+			color: #fff;
+			margin-left: 2rem;
+			cursor: pointer;
+		}
+	}
+
+	&__icons {
+		& a:hover,
+		& div:hover {
+			color: var(--main-color);
+		}
+	}
+
+	&__form {
+		position: absolute;
+		top: 115%;
+		right: -105%;
+		background: #fff;
+		width: 50rem;
+		height: 5rem;
+		display: flex;
+		align-items: center;
+		opacity: 0;
+
+		&.active {
+			right: 2rem;
+			opacity: 1;
+			transition: 0.4s linear;
+		}
+
+		& input {
+			width: 100%;
+			padding: 0 1.5rem;
+			font-size: 1.6rem;
+			color: var(--black);
+			text-transform: none;
+		}
+
+		& label {
+			font-size: 2.5rem;
+			padding-right: 1.5rem;
+			color: var(--black);
+			cursor: pointer;
+
+			&:hover {
+				color: var(--main-color);
+			}
+		}
+	}
+}
+
+@keyframes floating {
+	0%,
+	100% {
+		transform: translateY(0rem);
+	}
+	50% {
+		transform: translateY(-1rem);
+	}
+}
+
+#menu-btn {
+	display: none;
+}
