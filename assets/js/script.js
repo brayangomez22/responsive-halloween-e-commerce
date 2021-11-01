@@ -105,6 +105,6 @@ const sr = ScrollReveal({
 });
 
 sr.reveal(`.home-slider, .products-slider`);
-sr.reveal(`.about__content, .arrivals__box, .footer__box, .blogs__box`, { interval: 100 });
+sr.reveal(`.about__content, .arrivals__box, .blogs__box`, { interval: 100 });
 sr.reveal(`.contact__map`, { origin: 'left' });
 sr.reveal(`.contact__form`, { origin: 'right' });
