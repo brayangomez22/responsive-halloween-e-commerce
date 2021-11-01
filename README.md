@@ -1,6 +1,6 @@
 # Responsive Halloween Website 🎃
 
-<p align="center">
+<p>
   <a href="https://brayangomez22.github.io/responsive-halloween-e-commerce/" target="_blank">
     live demo
   </a>
